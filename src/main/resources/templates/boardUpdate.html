@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <style>
+        form {
+          border: 3px solid #ddd;
+          color:blue;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>글 수정하기</title>
+</head>
+<body>
+<form th:action="@{|/update/${board.id}|}" method="post" name="updateForm">
+    제목 : <input type="text" name="boardTitle" th:value="${board.boardTitle}">
+    내용 : <input type="text" name="boardContent" th:value="${board.boardContent}">
+    <button type="submit">글 수정하기</button>
+</form>
+</body>
+</html>
